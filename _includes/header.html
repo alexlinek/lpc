@@ -1,0 +1,31 @@
+<header class="site-header">
+  <div class="section">
+    <div class="group">
+
+      <div class="span1-4 header-left">
+        <a href="{{ site.baseurl }}/">
+          Logo
+        </a>
+      </div>
+
+      <div class="span3-4 header-right">
+        <nav class="site-nav">
+          <a href="#" class="menu-icon">
+            Menu
+          </a>
+          <div class="trigger">
+            <a class="page-link{% if page.url == "/" or page.url == '' %} active{% endif %}" href="/">
+              Home
+            </a>
+            {% for my_page in site.pages %}
+              {% if my_page.title %}
+                <a class="page-link{% if my_page.url == page.url %} active{% endif %}" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </nav>
+      </div>
+
+    </div>
+  </div>
+</header>

@@ -1,0 +1,182 @@
+/* Reset basic elements */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0; }
+
+/* Basic body styling */
+body {
+  font: 400 16px/1.5 "Source Sans Pro", sans-serif;
+  color: #324351;
+  background-color: #FFFFFF;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  -webkit-font-kerning: normal;
+          font-kerning: normal; }
+
+/* Set `margin-bottom` to maintain vertical rhythm */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure {
+  margin-bottom: 15px; }
+
+/* Images */
+img {
+  box-sizing: border-box;
+  max-width: 100%;
+  vertical-align: middle; }
+
+/* Figures */
+figure > img {
+  display: block;
+  box-sizing: border-box; }
+
+figcaption {
+  font-size: 14px; }
+
+/* Lists */
+ul,
+ol {
+  margin-left: 30px; }
+
+li > ul,
+li > ol {
+  margin-bottom: 0; }
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400; }
+
+.small {
+  font-size: 14px; }
+
+/* Links */
+a {
+  color: #005293;
+  text-decoration: none; }
+  a:visited {
+    color: #002747; }
+  a:hover {
+    color: #324351;
+    text-decoration: underline; }
+
+/* Clearfix */
+.wrapper:after, .group:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* Wrapper */
+.wrapper {
+  width: 100%; }
+
+/* Site Footer */
+#site-footer {
+  background: #005293;
+  color: #FFFFFF;
+  height: 144px;
+  padding: 2em; }
+
+.payment-methods i {
+  font-size: 1.5em; }
+.payment-methods .icon-square {
+  font-size: 2em; }
+
+.desktoptel {
+  display: block; }
+
+.mobiletel {
+  display: none; }
+
+@media screen and (max-width: 480px) {
+  .desktoptel {
+    display: none; }
+
+  .mobiletel {
+    display: block; } }
+/* Grid ------------------------------------ */
+.section {
+  clear: both;
+  margin: 0;
+  padding: 0; }
+
+.group {
+  width: 90%;
+  margin: 0 auto; }
+
+[class^="span"],
+[class*="span"] {
+  float: left;
+  margin: 0 2%; }
+
+/* margin - align */
+.span1-1 {
+  width: 96%; }
+
+/* halves */
+.span1-2 {
+  width: 46%; }
+
+/* thirds */
+.span1-3 {
+  width: 28.66%; }
+
+.span2-3 {
+  width: 62.33%; }
+
+/*  quarters  */
+.span1-4 {
+  width: 21%; }
+
+.span3-4 {
+  width: 71%; }
+
+@media screen and (max-width: 768px) {
+  .span1-2,
+  .span1-3,
+  .span2-3,
+  .span1-4,
+  .span3-4 {
+    width: 100%; } }
+h1 {
+  color: #005293; }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("/fonts/icomoon/icomoon.eot");
+  src: url("/fonts/icomoon/icomoon.eot") format("embedded-opentype"), url("/fonts/icomoon/icomoon.ttf") format("truetype"), url("/fonts/icomoon/icomoon.woff") format("woff"), url("/fonts/icomoon/icomoon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-square:before {
+  content: "\e901"; }
+
+.icon-cc-visa:before {
+  content: "\f1f0"; }
+
+.icon-cc-mastercard:before {
+  content: "\f1f1"; }
+
+.icon-cc-discover:before {
+  content: "\f1f2"; }
+
+.icon-cc-amex:before {
+  content: "\f1f3"; }
+
+.icon-camera:before {
+  content: "\e900"; }

@@ -1,0 +1,21 @@
+/* Site Footer */
+
+#site-footer {
+  background: $blue;
+  color: $white;
+  height: 144px;
+  padding: 2em;
+}
+
+.payment-methods {
+  i { font-size: 1.5em; }
+  .icon-square { font-size: 2em; }
+}
+
+
+.desktoptel { display: block; }
+.mobiletel { display: none; }
+@include media-query($breakpoint-mobile) {
+    .desktoptel { display: none; }
+    .mobiletel { display: block; }
+}
