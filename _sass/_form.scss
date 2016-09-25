@@ -1,0 +1,16 @@
+.button {
+  background: $gold;
+  border-bottom: 4px solid $darkGold;
+  color: $white;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: .35em .75em;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    border-bottom-color: $gold;
+    color: $white;
+    text-decoration: none;
+  }
+}
