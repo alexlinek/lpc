@@ -4,3 +4,47 @@
 h1 {
   color: $blue;
 }
+
+.hero {
+  height: 500px;
+}
+
+.residential-hero,
+.commercial-hero {
+  width: 50%;
+  margin: 0;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.residential-hero {
+  background-image: url('/images/home/bathroom-lc.jpg');
+}
+
+.commercial-hero {
+  background-image: url('/images/home/commercial-lc.jpg');
+}
+
+.hero-title-group {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  margin-top: 2em;
+
+  h1 {
+    color: $white;
+    font-size: 5em;
+    border-bottom: 2px solid $white;
+    padding-bottom: 4px;
+    display: inline-block;
+    line-height: 1em;
+    margin-bottom: 1em;
+  }
+
+  .button {
+
+  }
+}

@@ -2,26 +2,30 @@
 layout: default
 ---
 
-<header class="hero">
-  <div class="span1-2 residential-hero">
-    <hgroup class="hero-title-group">
-      <h1>Residential</h1>
-      <a href="{{ '/residential' | prepend: site.baseurl }}">
-        Learn More
-      </a>
-    </hgroup>
-  </div>
-  <div class="span1-2 commercial-hero">
-    <hgroup class="hero-title-group">
-      <h1>Commercial</h1>
-      <a href="{{ '/commercial' | prepend: site.baseurl }}">
-        Learn More
-      </a>
-    </hgroup>
+<header class="bg-dark-blue">
+  <div class="group hero">
+    <div class="span1-2 residential-hero">
+      <hgroup class="hero-title-group">
+        <h1>Residential</h1>
+        <br />
+        <a href="{{ '/residential' | prepend: site.baseurl }}" class="button">
+          Learn More
+        </a>
+      </hgroup>
+    </div>
+    <div class="span1-2 commercial-hero">
+      <hgroup class="hero-title-group">
+        <h1>Commercial</h1>
+        <br />
+        <a href="{{ '/commercial' | prepend: site.baseurl }}" class="button">
+          Learn More
+        </a>
+      </hgroup>
+    </div>
   </div>
 </header>
 
-<section class="home-services-section">
+<section class="home-services-section bg-dark-blue">
   {% include services_overview.html %}
 </section>
 
