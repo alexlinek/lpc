@@ -4,7 +4,11 @@ layout: default
 
 <header class="bg-dark-blue">
   <div class="hero">
-    <div class="span1-2 residential-hero">
+    <div class="residential-hero"></div>
+    <div class="commercial-hero"></div>
+  </div>
+  <div class="group">
+    <div class="span1-2">
       <hgroup class="hero-title-group">
         <h1>Residential</h1>
         <br />
@@ -13,7 +17,7 @@ layout: default
         </a>
       </hgroup>
     </div>
-    <div class="span1-2 commercial-hero">
+    <div class="span1-2">
       <hgroup class="hero-title-group">
         <h1>Commercial</h1>
         <br />
@@ -31,9 +35,9 @@ layout: default
 
 <section class="home-about-section">
   <div class="group">
-    <div class="span3-4">
+    <div class="span1-2">
       <hgroup>
-        <h1>celebrating 100 years!</h1>
+        <h1 class="bright-blue-color underline">Celebrating 100 years!</h1>
       </hgroup>
       <p>
         In 1916, Linek Brothers Plumbing Company was founded by Frank and Henry
@@ -41,11 +45,11 @@ layout: default
         100 years following, Linek Plumbing has provided quality plumbing services
         for both commercial and residential projects across the St. Louis area.
       </p>
-      <a href="/history">Read More</a>
+      <a class="button" href="/history">Read More</a>
     </div>
-    <div class="span1-4">
-      <img src="/images/history/family-then.jpg" alt="Linek Plumbing 1916" />
-      <img src="/images/history/family-now.jpg" alt="Linek Plumbing 2016" />
+    <div class="span1-2">
+      <img src="/images/history/family-then.jpg" class="family-then" alt="Linek Plumbing 1916" />
+      <img src="/images/history/family-now.jpg" class="family-now" alt="Linek Plumbing 2016" />
     </div>
   </div>
 </section>
@@ -58,7 +62,7 @@ layout: default
   <div class="group">
     <div class="span1-2">
       <hgroup>
-        <h1>Contact</h1>
+        <h1 class="bright-blue-color">Contact</h1>
       </hgroup>
 
       <h2>{{ site.phone }}</h2>

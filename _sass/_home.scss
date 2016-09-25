@@ -2,11 +2,26 @@
 
 // Hero banner -------------------------------------
 h1 {
-  color: $blue;
+
 }
 
 .hero {
   height: 700px;
+  position: absolute;
+  top: $nav-height;
+  left: 0;
+  right: 0;
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparentize(#005293, .7);
+    content: '';
+    z-index: 1;
+  }
 }
 
 .residential-hero,
@@ -17,22 +32,26 @@ h1 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;
+  position: absolute;
+  top: 0;
 }
 
 .residential-hero {
   background-image: url('/images/home/bathroom-lc.jpg');
+  left: 0;
 }
 
 .commercial-hero {
   background-image: url('/images/home/commercial-lc.jpg');
+  left: 50%;
 }
 
 .hero-title-group {
-  position: absolute;
-  left: 10%;
-  top: 10%;
-  margin-top: 2em;
+  padding-top: 10em;
+  height: 700px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
 
   h1 {
     color: $white;
@@ -88,6 +107,15 @@ h1 {
     left: 10%;
     position: absolute;
     right: 10%;
+  }
+}
+
+.services-footer {
+  padding: 4em;
+
+  .button {
+    padding-left: 3em;
+    padding-right: 3em;
   }
 }
 
@@ -147,12 +175,45 @@ h1 {
   text-align: center;
 }
 
+.home-about-section {
+  margin-top: 6em;
+  height: 1000px;
+
+  p { margin-bottom: 6em; }
+
+  .group {
+    position: relative;
+  }
+
+  .span1-2 {
+    position: relative;
+  }
+
+  .family-then,
+  .family-now {
+    position: absolute;
+    box-shadow: 0 10px 10px -3px rgba(0, 0, 0, .3);
+  }
+
+  .family-then {
+    transform: rotate(2deg);
+    z-index: 1;
+    top: 60px;
+  }
+
+  .family-now {
+    transform: rotate(7deg);
+    left: -460px;
+    top: 400px;
+  }
+}
+
 .home-contact-section {
   .contact-form {
     background: #eee;
     border-radius: 5px;
     padding: 1em;
-    margin-top: 6em;
+    margin-top: 4em;
     margin-bottom: 4em;
     box-shadow: 0 6px 6px -3px rgba(0, 0, 0, .1);
   }
