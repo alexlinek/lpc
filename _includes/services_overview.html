@@ -1,37 +1,43 @@
 <div class="services-wrapper">
-  <hgroup>
-    <h1>Services</h1>
-    <h2>For all jobs, big and small, you can count on Linek Plumbing to provide high quality work at a fair price.</h2>
-  </hgroup>
+  <div class="group">
+    <hgroup class="span1-1">
+      <h1>Services</h1>
+      <h2>For all jobs, big and small, you can count on Linek Plumbing to provide high quality work at a fair price.</h2>
+    </hgroup>
+  </div>
 
   <div class="group">
-    <div class="span1-3">
+    <div class="span1-3 service-cell with-divider">
       <img src="/images/service-icons/repairs.png" alt="Repairs" title="Repairs" />
-      Repairs
+      <h3>Repairs</h3>
     </div>
-    <div class="span1-3">
+    <div class="span1-3 service-cell with-divider">
       <img src="/images/service-icons/remodeling.png" alt="Remodeling" title="Remodeling" />
-      Remodeling
+      <h3>Remodeling</h3>
     </div>
-    <div class="span1-3">
+    <div class="span1-3 service-cell with-divider">
       <img src="/images/service-icons/water-heaters.png" alt="Water Heaters" title="Water Heaters" />
-      Water Heaters
+      <h3>Water Heaters</h3>
     </div>
-    <div class="span1-3">
+  </div>
+  <div class="group">
+    <div class="span1-3 service-cell">
       <img src="/images/service-icons/service-repairs.png" alt="Water Service Repairs" title="Water Service Repairs" />
-      Water Service Repairs
+      <h3>Water Service<br />Repairs</h3>
     </div>
-    <div class="span1-3">
+    <div class="span1-3 service-cell">
       <img src="/images/service-icons/backflow.png" alt="Backflow Preventers" title="Backflow Preventers" />
-      Backflow Preventers
+      <h3>Backflow<br />Preventers</h3>
     </div>
-    <div class="span1-3">
+    <div class="span1-3 service-cell">
       <img src="/images/service-icons/sewer-drain.png" alt="Sewer Drain Cleaning Repairs" title="Sewer Drain Cleaning Repairs" />
-      Sewer &amp; Drain Cleaning &amp; Repairs
+      <h3>Sewer &amp; Drain<br />Cleaning &amp; Repairs</h3>
     </div>
   </div>
 
-  <div class="services-footer">
-    <a href="{{ site.pages.services | prepend: site.baseurl }}">See More</a>
+  <div class="services-footer group">
+    <div class="span1-1 text-center">
+      <a class="button" href="{{ site.pages.services | prepend: site.baseurl }}">See More</a>
+    </div>
   </div>
 </div>

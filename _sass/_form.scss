@@ -14,3 +14,36 @@
     text-decoration: none;
   }
 }
+
+input[type="text"],
+input[type="tel"],
+textarea {
+  font-size: 1.5em;
+  padding: 15px;
+  border: 1px solid $grey;
+  background: $white;
+  width: 100%;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+input[type="submit"] {
+  background: $darkGold;
+  border: 0;
+  color: $white;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: .5em 1em;
+  text-transform: uppercase;
+}
+
+.field {
+  margin-bottom: .5em;
+
+  label {
+    display: block;
+    font-size: 1.5em;
+  }
+}
