@@ -1,31 +1,29 @@
 <header class="site-header">
   <div class="section">
-    <nav class="group main-nav">
-      <div class="span1-3 main-nav-left">
-        <div class="main-nav-cornerstone">
+    <nav class="group main-nav-bar">
+      <div class="top-nav">
+        <div class="top-nav-left">
           <img src="/images/100-seal.png"
             alt="100 years of service"
             class="service-seal"
             title="Linek Plumbing is celebrating 100 years of service" />
         </div>
-        <div class="main-nav-side main-nav-left">
-          {% include nav_item.html title='Services' url='services' %}
-          {% include nav_item.html title='History' url='history' %}
+        <div class="top-nav-right">
+          <a class="top-nav-phone" href="tel:+{{ site.phone }}">{{ site.phone }}</a>
         </div>
       </div>
-      <div class="span1-3 main-nav-center">
+      <div class="logo">
         <a href="{{ site.baseurl }}/" class="main-nav-logo">
           <img src="/images/logo.svg" alt="Linek Plumbing Logo" title="Linek Plumbing" />
         </a>
       </div>
-      <div class="span1-3 main-nav-right">
-        <div class="main-nav-cornerstone">
-          <a class="main-nav-phone" href="tel:+{{ site.phone }}">{{ site.phone }}</a>
-        </div>
-        <div class="main-nav-side main-nav-right">
-          {% include nav_item.html title='About' url='about' %}
-          {% include nav_item.html title='Contact' url='contact' %}
-        </div>
+      <div class="main-nav">
+        <ul class="main-nav-items">
+          <li>{% include nav_item.html title='Residential' url='residential' %}</li>
+          <li>{% include nav_item.html title='Commercial' url='commercial' %}</li>
+          <li>{% include nav_item.html title='About' url='about' %}</li>
+          <li>{% include nav_item.html title='Contact' url='contact' %}</li>
+        </ul>
       </div>
     </nav>
   </div>
