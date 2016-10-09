@@ -22,11 +22,12 @@
 
 .residential-hero {
   background-image: url('/images/home/resi-blue.jpg');
-  border-right: 3px solid $white;
+  border-right: 2px solid $white;
 }
 
 .commercial-hero {
   background-image: url('/images/home/comm-blue.jpg');
+  border-left: 2px solid $white;
 }
 
 .hero-title-group {
@@ -47,6 +48,7 @@
   }
 }
 
+
 .services-wrapper {
   background: $white;
   @include box-shadow(0px, 0px, 10px, $darkGrey);
@@ -56,7 +58,6 @@
   position: relative;
   width: 75%;
   z-index: 1;
-
   hgroup {
     margin-bottom: 2em;
     text-align: center;
@@ -106,7 +107,7 @@
 // About -------------------------------------
 .home-about-section {
   margin-top: 6em;
-  height: 1050px;
+  height: 1000px;
 
   .gold-100 {
     color: $gold;
@@ -134,13 +135,15 @@
     z-index: 1;
     top: 0px;
     right: 0;
+    max-width: 450px;
   }
 
   .family-now {
     transform: rotate(7deg);
-    right: 12%;
-    top: 25px;
+    left: 30%;
+    top: 80px;
     border: 30px solid white;
+    max-width: 600px;
   }
 }
 

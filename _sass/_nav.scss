@@ -1,23 +1,32 @@
-
+body {
+  padding-top: 160px;
+}
 .site-header {
+  @include transition(all, 200ms, linear);
+  @include box-shadow(0px, 0px, 0px, $white);
   background: $white;
+  height: 160px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
   z-index: 99;
-  transition: all 2s linear 1s;
 }
 
 .main-nav-bar {
   font-size: 18px;
-  height: $nav-height;
   position: relative;
   z-index: 5;
-  height: 160px;
 }
 
 // top nav
 .top-nav {
-  width: 100%;
+  @include transition(all, 100ms, linear);
   display: block;
   height: 90px;
+  opacity: 1;
+  width: 100%;
 }
 .top-nav-left,
 .top-nav-right {
@@ -26,9 +35,9 @@
   margin: 0;
   height: 100%;
 }
-.service-seal {
-  transform: rotate(-15deg);
-  width: 200px;
+.banner {
+  width: 300px;
+  padding: 1em .5em;
 }
 .top-nav-right {
   text-align: right;
@@ -77,6 +86,7 @@
 }
 
 .main-nav-logo {
+  @include transition(all, 250ms, linear);
   bottom: -50px;
   display: block;
   left: 50%;
@@ -90,19 +100,14 @@
 
 // sticky nav
 .site-header-scrolled {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  @include box-shadow(0px, 1px, 6px, $grey);
-  .main-nav-bar {
-    height: 60px;
-  }
+  @include box-shadow(0px, 1px, 6px, $darkGrey);
+  height: 60px;
   .top-nav {
-    display: none;
+    opacity: 0;
+    height: 0;
   }
   .main-nav-logo {
-    bottom: auto;
-    top: -32px;
+    bottom: -18px;
     width: 200px;
   }
 }
