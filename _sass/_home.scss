@@ -1,27 +1,12 @@
 // Home
 
 // Hero banner -------------------------------------
-h1 {
-
-}
 
 .hero {
-  height: 700px;
-  position: absolute;
-  top: $nav-height;
-  left: 0;
-  right: 0;
-
-  &:after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: transparentize(#005293, .7);
-    content: '';
-    z-index: 1;
-  }
+  margin: 0 auto;
+	max-width: $max-width;
+	width: 100%;
+	@extend %clearfix;
 }
 
 .residential-hero,
@@ -32,50 +17,47 @@ h1 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position: absolute;
-  top: 0;
+  float: left;
 }
 
 .residential-hero {
-  background-image: url('/images/home/bathroom-lc.jpg');
-  left: 0;
+  background-image: url('/images/home/resi-blue.jpg');
+  border-right: 2px solid $white;
 }
 
 .commercial-hero {
-  background-image: url('/images/home/commercial-lc.jpg');
-  left: 50%;
+  background-image: url('/images/home/comm-blue.jpg');
 }
 
 .hero-title-group {
-  padding-top: 10em;
-  height: 700px;
+  padding: 8em 6em;
+  height: 500px;
   position: relative;
   z-index: 1;
-  text-align: center;
+  text-align: left;
 
   h1 {
-    color: $white;
     border-bottom: 2px solid $white;
-    padding-bottom: 4px;
+    color: $white;
     display: inline-block;
+    font-size: 4em;
     line-height: 1em;
     margin-bottom: 1em;
+    padding-bottom: 4px;
   }
 }
 
 .services-wrapper {
   background: $white;
-  box-shadow: 0 6px 6px -2px rgba(0, 0, 0, .2);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
   margin: 0 auto;
-  margin-top: -100px;
+  margin-top: -50px;
   max-width: $max-width;
   position: relative;
+  width: 75%;
   z-index: 1;
-
-  h2 {
-    font-family: $base-font-family;
-    font-size: 1.5em;
-  }
 
   hgroup {
     margin-bottom: 2em;
@@ -108,6 +90,10 @@ h1 {
     position: absolute;
     right: 10%;
   }
+
+  img {
+    width: 200px;
+  }
 }
 
 .services-footer {
@@ -119,16 +105,58 @@ h1 {
   }
 }
 
+// About -------------------------------------
+.home-about-section {
+  margin-top: 6em;
+  height: 1050px;
+
+  .gold-100 {
+    color: $gold;
+    font-size: 2em;
+  }
+  p { margin-bottom: 2em; }
+
+  .group {
+    position: relative;
+  }
+
+  .span1-2,
+  .larger-pic {
+    position: relative;
+  }
+
+  .family-then,
+  .family-now {
+    position: absolute;
+    box-shadow: 0 10px 10px -3px rgba(0, 0, 0, .3);
+  }
+
+  .family-then {
+    transform: rotate(2deg);
+    z-index: 1;
+    top: 0px;
+    right: 0;
+  }
+
+  .family-now {
+    transform: rotate(7deg);
+    right: 12%;
+    top: 25px;
+    border: 30px solid white;
+  }
+}
+
+// Choose Us -------------------------------------
 .choose-us-wrapper {
   position: relative;
   color: $white;
   padding-top: 8em;
-  padding-bottom: 5em;
+  padding-bottom: 2em;
 
   h1 {
     background: $brightBlue;
     color: $white;
-    font-size: 6em;
+    font-size: 4em;
     left: 50%;
     line-height: 1;
     padding: .2em 1em;
@@ -160,9 +188,9 @@ h1 {
     top: 50%;
     left: 50%;
     width: 140%;
-    color: white;
+    color: $white;
     transform: translate(-50%, -50%);
-    background: #005293;
+    background: $blue;
     padding: 1em;
     font-size: 2em;
   }
@@ -170,44 +198,12 @@ h1 {
 
 .choose-us-footer {
   color: $white;
-  font-size: 1.25em;
-  padding-top: 2em;
-  text-align: center;
+  font-size: .8em;
+  padding-top: 4em;
+  text-align: left;
 }
 
-.home-about-section {
-  margin-top: 6em;
-  height: 1000px;
-
-  p { margin-bottom: 6em; }
-
-  .group {
-    position: relative;
-  }
-
-  .span1-2 {
-    position: relative;
-  }
-
-  .family-then,
-  .family-now {
-    position: absolute;
-    box-shadow: 0 10px 10px -3px rgba(0, 0, 0, .3);
-  }
-
-  .family-then {
-    transform: rotate(2deg);
-    z-index: 1;
-    top: 60px;
-  }
-
-  .family-now {
-    transform: rotate(7deg);
-    left: -460px;
-    top: 400px;
-  }
-}
-
+// Contact -------------------------------------
 .home-contact-section {
   .contact-form {
     background: #eee;

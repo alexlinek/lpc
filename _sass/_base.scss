@@ -66,17 +66,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 3em;
   color: $blue;
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 2em;
 }
 
 h3 {
   font-family: $base-font-family;
-  font-size: 2em;
+  font-size: 1em;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -96,7 +96,7 @@ a {
   text-decoration: none;
 
   &:visited {
-    color: darken($blue, 15%);
+    color: $darkBlue;
   }
 
   &:hover {
@@ -121,7 +121,7 @@ a {
 }
 
 .bg-dark-blue {
-  background: #005293;
+  background: $blue;
 }
 
 .text-center { text-align: center; }
@@ -133,5 +133,7 @@ a {
   &.underline {
     border-bottom: 2px solid $brightBlue;
     padding-bottom: 4px;
+    line-height: 1em;
+    max-width: 23ch;
   }
 }
