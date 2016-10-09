@@ -1,27 +1,33 @@
 .button,
 .button:visited {
   background: $gold;
-  border-bottom: 4px solid $darkGold;
+  @include box-shadow(0, 6px, 0, $darkGold);
   color: $white;
+  cursor: pointer;
   font-size: 1.5em;
   font-weight: bold;
   padding: .35em .75em;
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
-
+  top: 0;
   &:hover {
-    border-bottom-color: $gold;
+    @include box-shadow(0, 8px, 0, $darkGold);
+    background: lighten($gold, 5%);
     color: $white;
     text-decoration: none;
+    top: -2px;
+    // @include transform(translateY(-2px));
   }
 }
 
 input[type="text"],
 input[type="tel"],
 textarea {
-  font-size: 1.5em;
-  padding: 15px;
+  font-size: 1em;
+  padding: 10px;
   border: 1px solid $grey;
+  @include border-radius(3px);
   background: $white;
   width: 100%;
 }
@@ -31,13 +37,8 @@ textarea {
 }
 
 input[type="submit"] {
-  background: $darkGold;
   border: 0;
-  color: $white;
-  font-size: 1.5em;
-  font-weight: bold;
-  padding: .5em 1em;
-  text-transform: uppercase;
+  outline: 0;
 }
 
 .field {
@@ -45,6 +46,6 @@ input[type="submit"] {
 
   label {
     display: block;
-    font-size: 1.5em;
+    margin: .5em 0;
   }
 }

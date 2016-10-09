@@ -35,6 +35,7 @@ $gold:        #EDAA0B;
 $darkGold:    #D68101;
 
 $white:       #ffffff;
+$lightGrey:   #F9FAFB;
 $grey:        #848E97;
 $darkGrey:    #333;
 
@@ -99,6 +100,14 @@ $breakpoint-desktop:       1040px;
 	-ms-transition: $transition-property $transition-time $method;
 	-o-transition: $transition-property $transition-time $method;
 	transition: $transition-property $transition-time $method;
+}
+
+// Browser Prefixes
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
 }
 
 // Import partials

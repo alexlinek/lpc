@@ -8,7 +8,7 @@ $sidr-background: #333;
 $sidr-background-shadow-color: #222;
 $sidr-text-color: #fff;
 $sidr-box-shadow-color: #000;
-$sidr-input-background-color: #000;
+// $sidr-input-background-color: #000;
 
 // Width
 $sidebar-width: 260px;
@@ -149,52 +149,4 @@ $sidebar-width-neg: -260px;
         }
     }
 
-    form {
-        margin: 0 15px;
-    }
-
-    label {
-        font-size: $sidr-font-size - 2;
-    }
-
-    input[type="text"],
-    input[type="password"],
-    input[type="date"],
-    input[type="datetime"],
-    input[type="email"],
-    input[type="number"],
-    input[type="search"],
-    input[type="tel"],
-    input[type="time"],
-    input[type="url"],
-    textarea,
-    select {
-        width: 100%;
-        font-size: $sidr-font-size - 2;
-        padding: 5px;
-        @include box-sizing(border-box);
-        margin: 0 0 10px;
-        border-radius: 2px;
-        border: 0;
-        background: rgba($sidr-input-background-color, .1);
-        color: rgba($sidr-text-color, .6);
-        display: block;
-        clear: both;
-    }
-
-    input[type=checkbox] {
-        width: auto;
-        display: inline;
-        clear: none;
-    }
-
-    input[type=button],
-    input[type=submit] {
-        color: $sidr-background;
-        background: $sidr-text-color;
-
-        &:hover {
-            background: rgba($sidr-text-color, .9);
-        }
-    }
 }

@@ -48,19 +48,29 @@
   }
 }
 
-
-.services-wrapper {
-  background: $white;
-  @include box-shadow(0px, 0px, 10px, $darkGrey);
-  margin: 0 auto;
-  margin-top: -50px;
-  max-width: $max-width;
+// Services -------------------------------------
+.services-bg {
   position: relative;
+  height: 750px;
+}
+.services-wrapper {
+  @include box-shadow(0px, 3px, 10px, $darkGrey);
+  background: $white;
+  height: 850px;
+  left: 12.5%;
+  margin: 0 auto;
+  max-width: $max-width;
+  padding-top: 2em;
+  position: absolute;
+  top: -50px;
   width: 75%;
   z-index: 1;
   hgroup {
     margin-bottom: 2em;
     text-align: center;
+    h1 {
+      font-weight: normal;
+    }
   }
 }
 
@@ -96,8 +106,7 @@
 }
 
 .services-footer {
-  padding: 4em;
-
+  padding-top: 4em;
   .button {
     padding-left: 3em;
     padding-right: 3em;
@@ -106,14 +115,19 @@
 
 // About -------------------------------------
 .home-about-section {
-  margin-top: 6em;
+  margin-top: 9em;
   height: 1000px;
 
   .gold-100 {
     color: $gold;
     font-size: 2em;
+    font-weight: bold;
   }
-  p { margin-bottom: 2em; }
+  p {
+    font-size: 1.1em;
+    line-height: 1.75em;
+    margin-bottom: 2em;
+  }
 
   .group {
     position: relative;
@@ -127,7 +141,7 @@
   .family-then,
   .family-now {
     position: absolute;
-    box-shadow: 0 10px 10px -3px rgba(0, 0, 0, .3);
+    @include box-shadow(0px, 3px, 10px, $grey);
   }
 
   .family-then {
@@ -206,12 +220,30 @@
 
 // Contact -------------------------------------
 .home-contact-section {
+  margin: 5em 0 3em;
+  h1 {
+    line-height: 1em;
+  }
+  h2 {
+    font-family: $base-font-family;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+  }
+  address {
+    font-style: normal;
+    font-size: 1.25em;
+    margin: 1em 0;
+  }
+  .street-view {
+    width: 75%;
+    border: 20px solid white;
+    @include box-shadow(0px, 3px, 10px, $grey);
+  }
   .contact-form {
-    background: #eee;
-    border-radius: 5px;
-    padding: 1em;
-    margin-top: 4em;
-    margin-bottom: 4em;
-    box-shadow: 0 6px 6px -3px rgba(0, 0, 0, .1);
+    @include border-radius(5px);
+    @include box-shadow(0px, 3px, 10px, $grey);
+    background: $lightGrey;
+    margin: 2em 0;
+    padding: 2em 3em;
   }
 }
