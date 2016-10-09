@@ -1,4 +1,10 @@
 
+.site-header {
+  background: $white;
+  z-index: 99;
+  transition: all 2s linear 1s;
+}
+
 .main-nav-bar {
   font-size: 18px;
   height: $nav-height;
@@ -7,12 +13,12 @@
   height: 160px;
 }
 
+// top nav
 .top-nav {
   width: 100%;
   display: block;
-  height: 100px;
+  height: 90px;
 }
-
 .top-nav-left,
 .top-nav-right {
   float: left;
@@ -20,7 +26,6 @@
   margin: 0;
   height: 100%;
 }
-
 .service-seal {
   transform: rotate(-15deg);
   width: 200px;
@@ -41,9 +46,10 @@
   }
 }
 
+// main nav
 .main-nav-items {
   list-style: none;
-  padding: 0;
+  padding: .75em 0;
   margin: 0;
   height: 60px;
   li {
@@ -82,7 +88,26 @@
   }
 }
 
+// sticky nav
+.site-header-scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  @include box-shadow(0px, 1px, 6px, $grey);
+  .main-nav-bar {
+    height: 60px;
+  }
+  .top-nav {
+    display: none;
+  }
+  .main-nav-logo {
+    bottom: auto;
+    top: -32px;
+    width: 200px;
+  }
+}
 
+// tablet and mobile nav
 @media screen and (max-width: 900px) {
   .main-nav-logo {
     bottom: 100%;

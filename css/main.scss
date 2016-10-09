@@ -39,7 +39,7 @@ $breakpoint-mobile:        480px;
 $breakpoint-tablet:        768px;
 $breakpoint-desktop:       1040px;
 
-
+// Mixins
 // Use media queries like this:
 // @include media-query($breakpoint-tablet) {
 //     .wrapper {
@@ -51,6 +51,24 @@ $breakpoint-desktop:       1040px;
     @media screen and (max-width: $device) {
         @content;
     }
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+@mixin border-radius($radius: 3px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
 }
 
 // Import partials

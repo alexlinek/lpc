@@ -22,7 +22,7 @@
 
 .residential-hero {
   background-image: url('/images/home/resi-blue.jpg');
-  border-right: 2px solid $white;
+  border-right: 3px solid $white;
 }
 
 .commercial-hero {
@@ -49,9 +49,7 @@
 
 .services-wrapper {
   background: $white;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+  @include box-shadow(0px, 0px, 10px, $darkGrey);
   margin: 0 auto;
   margin-top: -50px;
   max-width: $max-width;

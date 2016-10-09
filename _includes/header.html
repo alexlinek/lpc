@@ -28,3 +28,17 @@
     </nav>
   </div>
 </header>
+<script type="text/javascript">
+  var sh = $(".site-header");
+      shs = "site-header-scrolled";
+      headerHeight = $('.site-header').height();
+
+  $(window).scroll(function() {
+    if( $(this).scrollTop() > headerHeight ) {
+      sh.addClass(shs);
+    } else {
+      sh.removeClass(shs);
+    }
+  });
+
+</script>
