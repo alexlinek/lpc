@@ -1,4 +1,26 @@
 ---
-layout: default
+layout: page
 title: Contact
 ---
+
+<section class="home-contact-section">
+  <div class="group">
+    <div class="span1-2">
+      <hgroup>
+        <h1 class="bright-blue-color">Contact</h1>
+      </hgroup>
+
+      <h2>{{ site.phone }}</h2>
+      <address>24 Kirkham Industrial Ct.
+        <br/>Webster Groves, MO 63119</address>
+
+      <p>Office Hours are between 7:30am and 4:30pm Monday through Friday.<br/>
+      Outside of those hours, we offer an emergency answering service with plumbers on call 24/7 (at the same phone number).</p>
+
+      <img class="street-view" src="/images/home/building-front.jpg" alt="Linek Plumbing HQ" />
+    </div>
+    <div class="span1-2">
+      {% include contact_form.html %}
+    </div>
+  </div>
+</section>
