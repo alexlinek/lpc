@@ -1,23 +1,27 @@
 /* Site Footer */
 
 #site-footer {
-  background: $blue;
+  background: $darkBlue;
   color: $white;
   padding: 2em 0 0;
 }
 
 .payment-methods {
-  .payments {
-    width: 90%;
+  .credit-cards i {
+    display: inline-block;
+    font-size: 2em;
+    margin-right: 5px;
   }
 }
 
 .licensing {
   font-size: 1.25em;
   text-transform: uppercase;
-  h5 {
+  h4 {
     width: 100%;
     text-align: center;
+    font-weight: normal;
+    letter-spacing: 1px;
   }
 }
 
@@ -30,6 +34,7 @@
     font-size: 2em;
     font-weight: bold;
     letter-spacing: 1px;
+    line-height: 1em;
   }
 }
 
