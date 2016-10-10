@@ -141,7 +141,7 @@
   .family-then,
   .family-now {
     position: absolute;
-    @include box-shadow(0px, 3px, 10px, $grey);
+    @include box-shadow(0px, 3px, 10px, $darkGrey);
   }
 
   .family-then {
