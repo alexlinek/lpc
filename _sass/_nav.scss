@@ -105,6 +105,7 @@ body {
   .top-nav {
     opacity: 0;
     height: 0;
+    pointer-events: none;
   }
   .main-nav-logo {
     bottom: -18px;

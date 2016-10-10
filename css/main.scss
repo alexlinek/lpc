@@ -28,7 +28,7 @@
 
 // Colors
 $blue:        #005293;
-$darkBlue:    #324351;
+$darkBlue:    darken($blue, 10%);
 $brightBlue:  #1687E0;
 
 $gold:        #EDAA0B;
@@ -37,7 +37,7 @@ $darkGold:    #D68101;
 $white:       #ffffff;
 $lightGrey:   #F9FAFB;
 $grey:        #848E97;
-$darkGrey:    #333;
+$darkGrey:    #324351;
 
 // Fonts
 $base-font-family: 'Source Sans Pro', sans-serif; // Google

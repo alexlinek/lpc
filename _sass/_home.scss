@@ -179,14 +179,8 @@
     top: -.75em;
     transform: translateX(-50%);
   }
-
-  ul {
-    list-style: none;
-  }
-
-  li {
-    text-align: center;
-  }
+  ul { list-style: none; }
+  li { text-align: center; }
 }
 
 .choose-us-bubble {
@@ -216,6 +210,19 @@
   font-size: .8em;
   padding-top: 4em;
   text-align: left;
+  .camera-text {
+    width: 75%;
+    margin: 0 auto;
+    i {
+      font-size: 4em;
+      display: inline-block;
+      margin-right: .5em;
+    }
+    p {
+      font-size: 1.2em;
+      display: inline-block;
+    }
+  }
 }
 
 // Contact -------------------------------------
