@@ -24,8 +24,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-square:before {
-  content: "\e901";
+.icon-truck:before {
+  content: "\f0d1";
+}
+.icon-building-o:before {
+  content: "\f0f7";
+}
+.icon-hospital-o:before {
+  content: "\f0f8";
+}
+.icon-university:before {
+  content: "\f19c";
+}
+.icon-building:before {
+  content: "\f1ad";
 }
 .icon-cc-visa:before {
   content: "\f1f0";
@@ -39,6 +51,18 @@
 .icon-cc-amex:before {
   content: "\f1f3";
 }
+.icon-shopping-bag:before {
+  content: "\f290";
+}
+.icon-basket:before {
+  content: "\f291";
+}
+.icon-office:before {
+  content: "\e903";
+}
 .icon-camera:before {
-  content: "\e900";
+  content: "\e90f";
+}
+.icon-food:before {
+  content: "\e9a3";
 }
