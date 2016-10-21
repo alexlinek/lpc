@@ -1,59 +1,3 @@
-body {
-  padding-top: 160px;
-}
-.site-header {
-  @include transition(all, 200ms, linear);
-  @include box-shadow(0px, 0px, 0px, $white);
-  background: $white;
-  height: 160px;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 100%;
-  z-index: 99;
-}
-
-.main-nav-bar {
-  font-size: 18px;
-  position: relative;
-  z-index: 5;
-}
-
-// top nav
-.top-nav {
-  @include transition(all, 100ms, linear);
-  display: block;
-  height: 90px;
-  opacity: 1;
-  width: 100%;
-}
-.top-nav-left,
-.top-nav-right {
-  float: left;
-  width: 50%;
-  margin: 0;
-  height: 100%;
-}
-.banner {
-  width: 300px;
-  padding: 1em .5em;
-}
-.top-nav-right {
-  text-align: right;
-}
-.top-nav-phone {
-  color: $gold;
-  float: right;
-  font-size: 2em;
-  font-weight: bold;
-  padding-top: .5em;
-  margin-right: 2%;
-  &:hover {
-    color: $gold;
-    text-decoration: none;
-  }
-}
 
 // main nav
 .main-nav-items {
@@ -66,6 +10,7 @@ body {
     float: left;
     text-align: center;
     width: 15.5%;
+    &:nth-of-type(3) { margin-left: 31%; }
     a {
       border-bottom: 2px solid transparent;
       color: $darkGrey;
@@ -81,10 +26,6 @@ body {
   }
 }
 
-.main-nav-items li:nth-of-type(3) {
-  margin-left: 31%;
-}
-
 .main-nav-logo {
   @include transition(all, 250ms, linear);
   bottom: -50px;
@@ -98,33 +39,20 @@ body {
   }
 }
 
-// sticky nav
-.site-header-scrolled {
-  @include box-shadow(0px, 1px, 6px, $darkGrey);
-  height: 60px;
-  .top-nav {
-    opacity: 0;
-    height: 0;
-    pointer-events: none;
-  }
-  .main-nav-logo {
-    bottom: -18px;
-    width: 200px;
-  }
-}
-
 // tablet and mobile nav
 @media screen and (max-width: 900px) {
   .main-nav-logo {
-    bottom: 100%;
+    left: 0;
+    bottom: -20px;
+    transform: none;
   }
-
-  .main-nav-items li:nth-of-type(3) {
-    margin-left: 1%;
-  }
-
   .main-nav-items {
-    width: 600px;
-    position: relative;
+    width: 70%;
+    float: right;
+  }
+  .main-nav-items li {
+    width: auto;
+    margin: 0 0 0 3%;
+    &:nth-of-type(3) { margin-left: 3%; }
   }
 }

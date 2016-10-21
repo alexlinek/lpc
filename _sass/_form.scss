@@ -34,11 +34,21 @@ textarea {
 
 textarea {
   min-height: 100px;
+  resize: vertical;
 }
 
 input[type="submit"] {
   border: 0;
   outline: 0;
+}
+
+input[type="radio"] {
+  margin-right: 1em;
+}
+.radio-buttons input {
+  &:last-child {
+    margin-left: 2em;
+  }
 }
 
 .field {
@@ -47,5 +57,6 @@ input[type="submit"] {
   label {
     display: block;
     margin: .5em 0;
+    font-weight: $bold;
   }
 }

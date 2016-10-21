@@ -34,7 +34,7 @@
 .span1-4 { width: 21%; }
 .span3-4 { width: 71%; }
 
-@include media-query($breakpoint-tablet) {
+@include media-query($breakpoint-mobile) {
 	.span1-2,
 	.span1-3,
 	.span2-3,

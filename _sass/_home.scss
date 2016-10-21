@@ -18,16 +18,26 @@
   background-repeat: no-repeat;
   background-position: center;
   float: left;
+  @include media-query($breakpoint-mobile) {
+    width: 100%;
+  }
 }
 
 .residential-hero {
   background-image: url('/images/home/resi-blue.jpg');
   border-right: 2px solid $white;
+  @include media-query($breakpoint-mobile) {
+    border-right: none;
+    border-bottom: 4px solid $white;
+  }
 }
 
 .commercial-hero {
   background-image: url('/images/home/comm-blue.jpg');
   border-left: 2px solid $white;
+  @include media-query($breakpoint-mobile) {
+    border-left: none;
+  }
 }
 
 .hero-title-group {
@@ -36,27 +46,35 @@
   position: relative;
   z-index: 1;
   text-align: left;
-
+  @include media-query($breakpoint-tablet) {
+    padding: 6em 3em;
+    height: 400px;
+  }
   h1 {
     border-bottom: 2px solid $white;
     color: $white;
     display: inline-block;
     font-size: 4em;
+    letter-spacing: 1px;
     line-height: 1em;
     margin-bottom: 1em;
     padding-bottom: 4px;
+    @include media-query($breakpoint-tablet) {
+      font-size: 3.5em;
+    }
   }
 }
 
 // Services -------------------------------------
 .services-bg {
   position: relative;
-  height: 750px;
+  height: 650px;
+  @include media-query($breakpoint-tablet) { height: 550px; }
 }
 .services-wrapper {
   @include box-shadow(0px, 3px, 10px, $darkGrey);
   background: $white;
-  height: 850px;
+  height: 750px;
   left: 12.5%;
   margin: 0 auto;
   max-width: $max-width;
@@ -65,6 +83,7 @@
   top: -50px;
   width: 75%;
   z-index: 1;
+  @include media-query($breakpoint-tablet) { height: 650px; }
   hgroup {
     margin-bottom: 2em;
     text-align: center;
@@ -117,7 +136,18 @@
 .home-about-section {
   margin-top: 9em;
   height: 1000px;
-
+  @include media-query($breakpoint-tablet) {
+    height: 850px;
+  }
+  .span1-2 {
+    @include media-query($breakpoint-tablet) {
+      width: 100%;
+    }
+  }
+  .bright-blue-color {
+    max-width: 24ch;
+    letter-spacing: 1px;
+  }
   .gold-100 {
     color: $gold;
     font-size: 2em;
@@ -127,6 +157,7 @@
     font-size: 1.1em;
     line-height: 1.75em;
     margin-bottom: 2em;
+    max-width: 80ch;
   }
 
   .group {
@@ -150,14 +181,25 @@
     top: 0px;
     right: 0;
     max-width: 450px;
+    @include media-query($breakpoint-tablet) {
+      right: 20px;
+      max-width: 300px;
+    }
   }
 
   .family-now {
     transform: rotate(7deg);
     left: 30%;
     top: 80px;
-    border: 30px solid white;
+    border: 30px solid $white;
     max-width: 600px;
+    @include media-query($breakpoint-tablet) {
+      left: 40px;
+      top: 100px;
+      max-width: 400px;
+      border: 20px solid $white;
+      transform: rotate(-7deg);
+    }
   }
 }
 
@@ -174,34 +216,46 @@
     font-size: 4em;
     left: 50%;
     line-height: 1;
-    padding: .2em 1em;
+    padding: 20px 40px;
     position: absolute;
     top: -.75em;
     transform: translateX(-50%);
+    @include media-query($breakpoint-tablet) {
+      padding: 20px 20px;
+    }
   }
   ul { list-style: none; }
   li { text-align: center; }
 }
 
 .choose-us-bubble {
-  border-radius: 145px;
+  border-radius: 50%;
   border: 4px solid $gold;
   height: 280px;
   text-align: center;
   width: 280px;
   position: relative;
   display: inline-block;
-
+  @include media-query($breakpoint-tablet) {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+  }
   h3 {
+    background: $blue;
+    color: $white;
+    font-size: 2em;
+    left: 50%;
+    letter-spacing: 2px;
+    padding: 1em;
     position: absolute;
     top: 50%;
-    left: 50%;
-    width: 140%;
-    color: $white;
     transform: translate(-50%, -50%);
-    background: $blue;
-    padding: 1em;
-    font-size: 2em;
+    width: 140%;
+    @include media-query($breakpoint-tablet) {
+      font-size: 1.5em;
+      padding: .5em;
+    }
   }
 }
 
@@ -210,13 +264,19 @@
   font-size: .8em;
   padding-top: 4em;
   text-align: left;
-  .camera-text {
-    width: 75%;
-    margin: 0 auto;
-    i {
-      font-size: 4em;
-      display: inline-block;
-      margin-right: .5em;
+  max-width: 100ch;
+  margin: 0 auto;
+  i {
+    font-size: 4em;
+    float: left;
+    margin: 0 .5em;
+  }
+  .detail-text {
+    float: left;
+    max-width: 80ch;
+    h3 {
+      font-size: 1.2em;
+      letter-spacing: 1px;
     }
     p {
       font-size: 1.2em;
@@ -252,5 +312,8 @@
     background: $lightGrey;
     margin: 2em 0;
     padding: 2em 3em;
+    @include media-query($breakpoint-tablet) {
+      padding: 2em 1em;
+    }
   }
 }
