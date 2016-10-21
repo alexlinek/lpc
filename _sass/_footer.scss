@@ -9,19 +9,23 @@
 .payment-methods {
   .credit-cards i {
     display: inline-block;
-    font-size: 2em;
+    font-size: 1.5em;
     margin-right: 5px;
   }
 }
 
 .licensing {
-  font-size: 1.25em;
-  text-transform: uppercase;
-  h4 {
-    width: 100%;
-    text-align: center;
-    font-weight: normal;
-    letter-spacing: 1px;
+  margin: 0 auto;
+  width: 200px;
+  img {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  .license-seal {
+    max-width: 100px;
+  }
+  .bbb {
+    max-width: 50px;
   }
 }
 
@@ -35,6 +39,9 @@
     font-weight: bold;
     letter-spacing: 1px;
     line-height: 1em;
+    @include media-query($breakpoint-tablet) {
+      font-size: 1.75em;
+    }
   }
 }
 
