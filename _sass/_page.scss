@@ -18,18 +18,38 @@
     padding: 2em 8%;
   }
   h1 { color: $white; }
+  .right-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 425px;
+    @include media-query($breakpoint-tablet) {
+      height: 500px;
+    }
+  }
+}
+
+#sink-img {
+  background-image: url('/images/residential/sink.jpg');
+}
+#plans-img {
+  background-image: url('/images/commercial/plans.jpg');
+}
+#about-img {
+  background-image: url('/images/history/family-now.jpg');
+  background-position: top left;
 }
 
 // Overlay Stripe -------------------------------------
 .stripe-bg {
   background: $blue;
   position: relative;
-  height: 550px;
+  height: 600px;
 }
 .overlay-wrapper {
   @include box-shadow(0px, 3px, 10px, $darkGrey);
   background: $white;
-  height: 600px;
+  height: auto;
   left: 12.5%;
   margin: 0 auto;
   max-width: $max-width;
@@ -46,6 +66,12 @@
     }
   }
 }
+#resi-stripe { height: 725px; }
+#resi-overlay { height: 775px; }
+#comm-stripe { height: 575px;}
+#comm-overlay { height: 625px; }
+#about-stripe { height: 900px; }
+#about-overlay { height: 950px; }
 
 .aff-logo {
   max-width: 400px;
