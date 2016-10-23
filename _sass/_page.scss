@@ -12,6 +12,10 @@
   .span1-2 {
     width: 50%;
     margin: 0;
+
+    @include media-query($breakpoint-mobile) {
+      width: 100%;
+    }
   }
 
   .left-header {
@@ -45,12 +49,17 @@
   background: $blue;
   position: relative;
   height: 600px;
+
+  @include media-query($breakpoint-mobile) {
+    height: auto !important;
+  }
 }
+
 .overlay-wrapper {
   @include box-shadow(0px, 3px, 10px, $darkGrey);
   background: $white;
   height: auto;
-  left: 12.5%;
+  left: 50%;
   margin: 0 auto;
   max-width: $max-width;
   padding-top: 2em;
@@ -58,6 +67,19 @@
   top: -25px;
   width: 75%;
   z-index: 1;
+  transform: translateX(-50%);
+
+  @include media-query($breakpoint-tablet) {
+    width: 95%;
+  }
+
+  @include media-query($breakpoint-mobile) {
+    width: 100%;
+    height: auto !important;
+    position: static;
+    transform: none;
+  }
+
   hgroup {
     margin-bottom: 2em;
     text-align: center;
@@ -88,6 +110,18 @@
     text-transform: uppercase;
   }
 }
+
+.industry-list {
+  ul { list-style: none; }
+  li {
+    padding: 2em 0;
+    i {
+      font-size: 1.5em;
+      margin-right: 1em;
+    }
+  }
+}
+
 .history-section {
   margin: 6em 0 4em;
 }

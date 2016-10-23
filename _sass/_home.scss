@@ -4,7 +4,7 @@
 
 .hero {
   margin: 0 auto;
-	max-width: $max-width;
+	max-width: 100%;
 	width: 100%;
 	@extend %clearfix;
 }
@@ -204,6 +204,10 @@
       border: 20px solid $white;
       transform: rotate(-7deg);
     }
+
+    @include media-query($breakpoint-mobile) {
+      display: none;
+    }
   }
 }
 
@@ -220,10 +224,13 @@
     font-size: 4em;
     left: 50%;
     line-height: 1;
+    min-width: 300px;
     padding: 20px 40px;
     position: absolute;
+    text-align: center;
     top: -.75em;
     transform: translateX(-50%);
+
     @include media-query($breakpoint-tablet) {
       padding: 20px 20px;
     }

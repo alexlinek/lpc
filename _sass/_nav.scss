@@ -37,15 +37,36 @@
   img {
     width: 100%;
   }
-}
 
-// tablet and mobile nav
-@media screen and (max-width: 900px) {
-  .main-nav-logo {
+  @include media-query($breakpoint-tablet) {
     left: 0;
     bottom: -20px;
     transform: none;
   }
+
+  @include media-query($breakpoint-mobile) {
+    width: 160px;
+    bottom: -40px;
+  }
+}
+
+.mobile-nav-launcher {
+  float: right;
+  font-size: 1.2em;
+  color: $grey;
+  display: none;
+
+  @include media-query($breakpoint-mobile) {
+    display: block;
+  }
+}
+
+.mobile-nav-close {
+  display: none;
+}
+
+// tablet and mobile nav
+@media screen and (max-width: 900px) {
   .main-nav-items {
     width: 70%;
     float: right;
@@ -54,5 +75,50 @@
     width: auto;
     margin: 0 0 0 3%;
     &:nth-of-type(3) { margin-left: 3%; }
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .main-nav {
+    float: none;
+    padding: 6%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $white;
+    display: none;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  .mobile-nav-close {
+    display: block;
+    float: right;
+  }
+
+  .main-nav-items {
+    float: none;
+    display: block;
+    width: 100%;
+  }
+
+  .main-nav-items li,
+  .main-nav-items li:nth-of-type(3) {
+    margin: 0;
+    float: none;
+    display: block;
+
+    a {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 3%;
+      margin: 3%;
+    }
   }
 }

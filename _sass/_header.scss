@@ -1,19 +1,30 @@
 // Site Header
 
+$header-height: 160px;
+$mobile-header-height: 120px;
+
 body {
-  padding-top: 160px;
+  padding-top: $header-height;
+
+  @include media-query($breakpoint-mobile) {
+    padding-top: $mobile-header-height;
+  }
 }
 .site-header {
   @include transition(all, 200ms, linear);
   @include box-shadow(0px, 0px, 0px, $white);
   background: $white;
-  height: 160px;
+  height: $header-height;
   left: 0;
   position: fixed;
   right: 0;
   top: 0;
   width: 100%;
   z-index: 99;
+
+  @include media-query($breakpoint-mobile) {
+    height: $mobile-header-height;
+  }
 }
 
 // sticky nav
@@ -28,6 +39,15 @@ body {
   .main-nav-logo {
     bottom: -18px;
     width: 200px;
+
+    @include media-query($breakpoint-mobile) {
+      bottom: -40px;
+      width: 160px;
+    }
+  }
+
+  .mobile-nav-launcher {
+    margin-top: 15px;
   }
 }
 
@@ -45,6 +65,9 @@ body {
   height: 90px;
   opacity: 1;
   width: 100%;
+  @include media-query($breakpoint-mobile) {
+    height: 75px;
+  }
 }
 .top-nav-left,
 .top-nav-right {
@@ -57,8 +80,17 @@ body {
   width: 300px;
   padding: 1em .5em;
 }
+.top-nav-left {
+  @include media-query($breakpoint-mobile) {
+    display: none;
+  }
+}
 .top-nav-right {
   text-align: right;
+
+  @include media-query($breakpoint-mobile) {
+    width: 100%;
+  }
 }
 .top-nav-phone {
   color: $gold;
@@ -71,5 +103,16 @@ body {
   &:hover {
     color: $gold;
     text-decoration: none;
+  }
+
+  @include media-query($breakpoint-mobile) {
+    font-size: 1em;
+    color: $white;
+    background: $gold;
+    margin: 0;
+    text-align: center;
+    display: block;
+    padding: .5em;
+    width: 100%;
   }
 }
