@@ -17,9 +17,10 @@
           <img src="/images/logo.svg" alt="Linek Plumbing Logo" title="Linek Plumbing" />
         </a>
       </div>
-      <a class="mobile-nav-launcher">Menu</a>
+      <a class="mobile-nav-launcher burger">
+        <span></span>
+      </a>
       <div class="main-nav">
-        <a class="mobile-nav-close">Close Menu</a>
         <ul class="main-nav-items">
           <li>{% include nav_item.html title='Residential' url='residential' %}</li>
           <li>{% include nav_item.html title='Commercial' url='commercial' %}</li>
@@ -43,12 +44,11 @@
       sh.removeClass(shs);
     }
   });
-
+  //mobile menu
   $('.mobile-nav-launcher').click(function () {
-    $('.main-nav').addClass('show');
+    $(this).toggleClass('active');
+    $('.main-nav').toggleClass('active');
+    $('body').bind('touchmove', function(e){e.preventDefault()})
   });
 
-  $('.mobile-nav-close').click(function () {
-    $('.main-nav').removeClass('show');
-  });
 </script>

@@ -20,7 +20,7 @@ body {
   right: 0;
   top: 0;
   width: 100%;
-  z-index: 99;
+  z-index: 999;
 
   @include media-query($breakpoint-mobile) {
     height: $mobile-header-height;
@@ -39,15 +39,10 @@ body {
   .main-nav-logo {
     bottom: -18px;
     width: 200px;
-
     @include media-query($breakpoint-mobile) {
-      bottom: -40px;
+      bottom: 0px;
       width: 160px;
     }
-  }
-
-  .mobile-nav-launcher {
-    margin-top: 15px;
   }
 }
 
@@ -66,7 +61,7 @@ body {
   opacity: 1;
   width: 100%;
   @include media-query($breakpoint-mobile) {
-    height: 75px;
+    height: 60px;
   }
 }
 .top-nav-left,

@@ -93,6 +93,48 @@ $breakpoint-desktop:       1040px;
   border-radius: $radius;
 }
 
+@mixin burger( $color:$grey,$thickness:2px,$width:25px,$position:relative ) {
+  cursor: pointer;
+  position: $position;
+  span {
+	  background: $color;
+	  display: block;
+	  height: $thickness;
+		left: 50%;
+    position: absolute;
+    top: 50%;
+    -webkit-transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out;
+		-ms-transition: all .2s ease-in-out;
+		transition: all .2s ease-in-out;
+		@include transform(translate(-50%,-50%));
+		width: $width;
+    &:before, &:after {
+	    background: $color;
+	    content: '';
+      height: $thickness;
+      position: absolute;
+      -webkit-transition: all .2s ease-in-out;
+			-moz-transition: all .2s ease-in-out;
+			-ms-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+      width: $width;
+    }
+    &:before { top: -8px; }
+    &:after { top: 8px; }
+  }
+	&.active {
+	  span {
+	    background: transparent;
+			&:before {
+				@include transform(rotate(45deg) translate(5px, 6px));
+			}
+			&:after {
+				@include transform(rotate(-45deg) translate(5px, -6px));
+			}
+	  }
+	}
+}
 
 @mixin transition($transition-property, $transition-time, $method) {
 	-webkit-transition: $transition-property $transition-time $method;
