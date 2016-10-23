@@ -27,14 +27,15 @@
 }
 
 .main-nav-logo {
+  @include transform(translateX(-50%));
   @include transition(all, 250ms, linear);
   bottom: -50px;
   display: block;
   left: 50%;
-  position: absolute;
-  transform: translateX(-50%);
-  width: 28%;
   max-width: 350px;
+  outline: none!important;
+  position: absolute;
+  width: 28%;
   img {
     width: 100%;
   }
@@ -42,7 +43,7 @@
   @include media-query($breakpoint-tablet) {
     left: 0;
     bottom: -20px;
-    transform: none;
+    @include transform(none);
     width: 200px;
   }
 

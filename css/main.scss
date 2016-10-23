@@ -144,11 +144,11 @@ $breakpoint-desktop:       1040px;
 	transition: $transition-property $transition-time $method;
 }
 
-// Browser Prefixes
 @mixin transform($transforms) {
 	-webkit-transform: $transforms;
 	-moz-transform: $transforms;
 	-ms-transform: $transforms;
+  -o-transform: $transforms;
 	transform: $transforms;
 }
 

@@ -62,7 +62,7 @@
   @include box-shadow(0px, 3px, 10px, $darkGrey);
   background: $white;
   height: auto;
-  left: 50%;
+  left: 12.5%;
   margin: 0 auto;
   max-width: $max-width;
   padding-top: 2em;
@@ -70,10 +70,10 @@
   top: -25px;
   width: 75%;
   z-index: 1;
-  transform: translateX(-50%);
 
   @include media-query($breakpoint-tablet) {
     width: 95%;
+    left: 2.5%;
   }
 
   @include media-query($breakpoint-mobile) {
@@ -81,7 +81,6 @@
     width: 100%;
     height: auto !important;
     position: static;
-    transform: none;
   }
 
   hgroup {
@@ -113,8 +112,18 @@
     height: 675px;
   }
 }
-#about-stripe { height: 950px; }
-#about-overlay { height: 1000px; }
+#about-stripe {
+  height: 950px;
+  @media screen and (min-width: 1200px) {
+    height: 1025px;
+  }
+}
+#about-overlay {
+  height: 1000px;
+  @media screen and (min-width: 1200px) {
+    height: 1075px;
+  }
+}
 
 #about-overlay {
   h2 {
@@ -140,8 +149,9 @@
   }
 }
 .aff-logo {
-  max-width: 400px;
+  max-width: 350px;
   width: 90%;
+  text-align: center;
   &.pp-local { margin-top: 3.5em; }
   @include media-query($breakpoint-mobile) {
     max-width: 200px;

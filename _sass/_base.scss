@@ -94,6 +94,7 @@ p {
 a {
   color: $blue;
   text-decoration: none;
+  outline: none!important;
 
   &:visited {
     color: $darkBlue;
