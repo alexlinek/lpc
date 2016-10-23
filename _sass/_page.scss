@@ -32,6 +32,9 @@
     }
   }
 }
+.about-list {
+  margin-left: 20px;
+}
 
 #sink-img {
   background-image: url('/images/residential/sink.jpg');
@@ -110,12 +113,40 @@
     height: 675px;
   }
 }
-#about-stripe { height: 900px; }
-#about-overlay { height: 950px; }
+#about-stripe { height: 950px; }
+#about-overlay { height: 1000px; }
 
+#about-overlay {
+  h2 {
+    text-align: center;
+    margin: 1em auto 0.5em;
+    @include media-query($breakpoint-mobile) {
+      text-align: left;
+      margin-left: 6%;
+    }
+  }
+  h4 {
+    font-size: 1.25em;
+    margin-bottom: .25em;
+  }
+}
+.aff-logos {
+  margin-bottom: 2em;
+  .span1-2,
+  .span1-3 {
+    @include media-query($breakpoint-mobile) {
+      width: 46%;
+    }
+  }
+}
 .aff-logo {
   max-width: 400px;
   width: 90%;
+  &.pp-local { margin-top: 3.5em; }
+  @include media-query($breakpoint-mobile) {
+    max-width: 200px;
+    &.pp-local { margin-top: 2em; }
+  }
 }
 
 // Column Section -------------------------------------
@@ -126,6 +157,11 @@
     text-align: center;
     font-size: 1.5em;
     text-transform: uppercase;
+    img {
+      @include media-query($breakpoint-tablet) {
+        max-width: 150px;
+      }
+    }
   }
 }
 
@@ -166,6 +202,71 @@
 
 .history-section {
   margin: 6em 0 4em;
+}
+
+.historic-img {
+  max-width: 400px;
+  position: relative;
+  float: right;
+  margin-top: -30px;
+  @include media-query($breakpoint-tablet) {
+    max-width: 300px;
+    margin-top: 15px;
+  }
+  @include media-query($breakpoint-mobile) {
+    float: left;
+    max-width: 150px;
+    margin-right: 10px;
+  }
+  &:nth-child(1) {
+    @include transform(rotate(-1deg));
+    max-width: 350px;
+    z-index: 2;
+    float: left;
+    display: none;
+    @include media-query($breakpoint-tablet) {
+      max-width: 300px;
+      display: block;
+    }
+    @include media-query($breakpoint-mobile) {
+      @include transform(rotate(0));
+      max-width: 150px;
+    }
+  }
+  &:nth-child(2) {
+    @include transform(rotate(3deg));
+    max-width: 350px;
+    @include media-query($breakpoint-tablet) {
+      max-width: 300px;
+    }
+    @include media-query($breakpoint-mobile) {
+      @include transform(rotate(0));
+      max-width: 160px;
+    }
+  }
+  &:nth-child(3) {
+    max-height: 400px;
+    @include transform(rotate(-2deg));
+    float: left;
+    @media screen and (min-width: 1240px) {
+      margin-left: 25%;
+    }
+    @include media-query($breakpoint-tablet) {
+      max-height: 300px;
+      margin-left: 50px;
+    }
+    @include media-query($breakpoint-mobile) {
+      margin-left: 0;
+      @include transform(rotate(0));
+    }
+  }
+  &:nth-child(4) {
+    @include transform(rotate(3deg));
+    z-index: -1;
+    @include media-query($breakpoint-mobile) {
+      @include transform(rotate(0));
+    }
+  }
 }
 
 // Service Areas -------------------------------------
