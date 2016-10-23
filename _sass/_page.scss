@@ -286,7 +286,10 @@
 .service-area-list {
   float: left;
   width: 28.66%;
-  font-size: .8em;
+  font-size: 1em;
+  @include media-query($breakpoint-desktop) {
+    font-size: .8em;
+  }
   @include media-query($breakpoint-mobile) {
     display: none;
   }

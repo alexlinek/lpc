@@ -1,8 +1,8 @@
-<form class="contact-form">
+<form class="contact-form" method="POST" action="https://formspree.io/alexlinek267@gmail.com">
   <hgroup>
     <h2>Get in Touch</h2>
   </hgroup>
-
+  <input type="hidden" name="_subject" value="Website Form Submission" />
   <div class="field">
     <label for="contact-name">Name</label>
     <input type="text" id="contact-name" name="name" />
@@ -16,6 +16,7 @@
     <input type="radio" name="service-type" value="residential" />Residential
     <input type="radio" name="service-type" value="commercial" />Commercial
   </div>
+  <input type="text" name="_gotcha" style="display:none" />
   <div class="field">
     <label for="contact-message">Message</label>
     <textarea id="contact-message" name="message"></textarea>
