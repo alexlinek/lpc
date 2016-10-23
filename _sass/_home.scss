@@ -70,6 +70,10 @@
   position: relative;
   height: 650px;
   @include media-query($breakpoint-tablet) { height: 550px; }
+  @include media-query($breakpoint-mobile) { height: 725px; }
+  @media screen and (min-width: 440px) and (max-width: 600px) {
+    height: 800px;
+  }
 }
 .services-wrapper {
   @include box-shadow(0px, 3px, 10px, $darkGrey);
@@ -88,6 +92,14 @@
     width: 80%;
     left: 10%;
   }
+  @include media-query($breakpoint-mobile) {
+    height: 825px;
+    width: 90%;
+    left: 5%;
+  }
+  @media screen and (min-width: 440px) and (max-width: 600px) {
+    height: 900px;
+  }
   hgroup {
     margin-bottom: 2em;
     text-align: center;
@@ -103,7 +115,8 @@
   position: relative;
   text-align: center;
   width: 33%;
-
+  float: left;
+  h3 { line-height: 1.25em;}
   &:not(:first-child):before {
     border-left: 1px solid $grey;
     bottom: 10%;
@@ -126,13 +139,24 @@
   img {
     width: 200px;
   }
-}
-
-.services-footer {
-  padding-top: 4em;
-  .button {
-    padding-left: 3em;
-    padding-right: 3em;
+  &:nth-child(4) {
+    &:before { border-left: none; }
+    &:after { border-bottom: none; }
+  }
+  @include media-query($breakpoint-mobile) {
+    width: 50%;
+    height: 185px;
+    &:nth-child(3),
+    &:nth-child(5) {
+      &:before { border-left: none; }
+    }
+    &:nth-child(4) {
+      &:before { border-left: 1px solid $grey; }
+      &:after { border-bottom: 1px solid $grey; }
+    }
+  }
+  @media screen and (min-width: 440px) and (max-width: 600px) {
+    height: 225px;
   }
 }
 
@@ -143,6 +167,9 @@
   @include media-query($breakpoint-tablet) {
     height: 850px;
   }
+  @include media-query($breakpoint-tablet) {
+    height: 950px;
+  }
   .span1-2 {
     @include media-query($breakpoint-tablet) {
       width: 100%;
@@ -151,6 +178,10 @@
   .bright-blue-color {
     max-width: 24ch;
     letter-spacing: 1px;
+    @include media-query($breakpoint-mobile) {
+      font-size: 2em;
+      max-width: 25ch;
+    }
   }
   .gold-100 {
     color: $gold;
@@ -162,6 +193,9 @@
     line-height: 1.75em;
     margin-bottom: 2em;
     max-width: 80ch;
+    @include media-query($breakpoint-mobile) {
+      font-size: 1em;
+    }
   }
 
   .group {
@@ -180,7 +214,7 @@
   }
 
   .family-then {
-    transform: rotate(2deg);
+    @include transform(rotate(2deg));
     z-index: 1;
     top: 0px;
     right: 0;
@@ -189,10 +223,15 @@
       right: 20px;
       max-width: 300px;
     }
+    @include media-query($breakpoint-mobile) {
+      top: 50px;
+      max-width: 75%;
+      right: 20px;
+    }
   }
 
   .family-now {
-    transform: rotate(7deg);
+    @include transform(rotate(7deg));
     left: 30%;
     top: 80px;
     border: 30px solid $white;
@@ -202,11 +241,11 @@
       top: 100px;
       max-width: 400px;
       border: 20px solid $white;
-      transform: rotate(-7deg);
+      @include transform(rotate(-7deg));
     }
-
     @include media-query($breakpoint-mobile) {
-      display: none;
+      max-width: 80%;
+      top: 300px;
     }
   }
 }
@@ -217,6 +256,9 @@
   color: $white;
   padding-top: 8em;
   padding-bottom: 2em;
+  @include media-query($breakpoint-mobile) {
+    padding-top: 5em;
+  }
 
   h1 {
     background: $brightBlue;
@@ -233,6 +275,9 @@
 
     @include media-query($breakpoint-tablet) {
       padding: 20px 20px;
+    }
+    @include media-query($breakpoint-mobile) {
+      font-size: 3em;
     }
   }
   ul { list-style: none; }
@@ -281,6 +326,9 @@
     font-size: 4em;
     float: left;
     margin: 0 .5em;
+    @include media-query($breakpoint-mobile) {
+      margin: 0 .5em 5px 0;
+    }
   }
   .detail-text {
     float: left;
@@ -288,10 +336,16 @@
     h3 {
       font-size: 1.2em;
       letter-spacing: 1px;
+      @include media-query($breakpoint-mobile) {
+        margin-bottom: 5px;
+      }
     }
     p {
       font-size: 1.2em;
       display: inline-block;
+      @include media-query($breakpoint-mobile) {
+        font-size: 1em;
+      }
     }
   }
 }
@@ -299,6 +353,9 @@
 // Contact -------------------------------------
 .home-contact-section {
   margin: 7em 0 5em;
+  @include media-query($breakpoint-mobile) {
+    margin: 5em 0 3em;
+  }
   h1 {
     line-height: 1em;
   }
@@ -325,6 +382,7 @@
     padding: 2em 3em;
     @include media-query($breakpoint-tablet) {
       padding: 2em 1em;
+      max-width: 95%;
     }
   }
 }
