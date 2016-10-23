@@ -6,11 +6,15 @@
   padding: 2em 0 0;
 }
 
-.payment-methods {
+#payment-methods {
   .credit-cards i {
     display: inline-block;
     font-size: 1.5em;
     margin-right: 5px;
+  }
+  @include media-query($breakpoint-mobile) {
+    margin-bottom: 1em;
+    text-align: center;
   }
 }
 
@@ -29,10 +33,14 @@
   }
 }
 
-.footer-phone {
+#footer-phone {
   width: 100%;
   text-align: right;
   margin-right: 0!important;
+  @include media-query($breakpoint-mobile) {
+    text-align: center;
+    margin-top: 1em;
+  }
   .desktoptel {
     color: $gold;
     font-size: 2em;
@@ -43,14 +51,23 @@
       font-size: 1.75em;
     }
   }
+  .mobiletel {
+    background: $gold;
+    padding: .5em 0;
+    font-size: 1.25em;
+    font-weight: $bold;
+    letter-spacing: 2px;
+    @include border-radius(5px);
+    a { color: $white; }
+  }
 }
 
 .desktoptel { display: block; }
 .mobiletel { display: none; }
 
 @include media-query($breakpoint-mobile) {
-    .desktoptel { display: none; }
-    .mobiletel { display: block; }
+  .desktoptel { display: none; }
+  .mobiletel { display: block; }
 }
 
 
@@ -62,4 +79,7 @@
 .copyright {
   width: 100%;
   text-align: right;
+  @include media-query($breakpoint-mobile) {
+    text-align: center;
+  }
 }

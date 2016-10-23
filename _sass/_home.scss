@@ -382,7 +382,6 @@
     padding: 2em 3em;
     @include media-query($breakpoint-tablet) {
       padding: 2em 1em;
-      max-width: 95%;
     }
   }
 }

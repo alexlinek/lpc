@@ -18,6 +18,9 @@
 [class*="span"] {
 	float: left;
 	margin: 0 2%;
+	@include media-query($breakpoint-mobile) {
+		margin: 0;
+	}
 }
 
 /* margin - align */
