@@ -6,22 +6,22 @@
 // @font-face
 @font-face {
   font-family: 'bebas-neue';
-  src: url('../fonts/bebas/bebasneue_bold.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/bebas/bebasneue_bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/bebas/bebasneue_bold.woff2') format('woff2'),
-       url('../fonts/bebas/bebasneue_bold.woff') format('woff'),
-       url('../fonts/bebas/bebasneue_bold.ttf') format('truetype');
+  src: url('/fonts/bebas/bebasneue_bold.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/bebas/bebasneue_bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/bebas/bebasneue_bold.woff2') format('woff2'),
+       url('/fonts/bebas/bebasneue_bold.woff') format('woff'),
+       url('/fonts/bebas/bebasneue_bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'bebas-neue';
-  src: url('../fonts/bebas/bebasneue_regular.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/bebas/bebasneue_regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/bebas/bebasneue_regular.woff2') format('woff2'),
-       url('../fonts/bebas/bebasneue_regular.woff') format('woff'),
-       url('../fonts/bebas/bebasneue_regular.ttf') format('truetype');
+  src: url('/fonts/bebas/bebasneue_regular.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/bebas/bebasneue_regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/bebas/bebasneue_regular.woff2') format('woff2'),
+       url('/fonts/bebas/bebasneue_regular.woff') format('woff'),
+       url('/fonts/bebas/bebasneue_regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
