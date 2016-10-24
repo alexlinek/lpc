@@ -233,12 +233,12 @@
   .family-now {
     @include transform(rotate(7deg));
     left: 30%;
-    top: 80px;
+    top: 75px;
     border: 30px solid $white;
     max-width: 600px;
     @include media-query($breakpoint-tablet) {
       left: 40px;
-      top: 100px;
+      top: 120px;
       max-width: 400px;
       border: 20px solid $white;
       @include transform(rotate(-7deg));
@@ -252,15 +252,16 @@
 
 // Choose Us -------------------------------------
 .choose-us-wrapper {
-  position: relative;
   color: $white;
-  padding-top: 8em;
   padding-bottom: 2em;
+  padding-top: 8em;
+  position: relative;
   @include media-query($breakpoint-mobile) {
     padding-top: 5em;
   }
 
   h1 {
+    @include transform(translateX(-50%));
     background: $brightBlue;
     color: $white;
     font-size: 4em;
@@ -271,7 +272,6 @@
     position: absolute;
     text-align: center;
     top: -.75em;
-    @include transform(translateX(-50%));
 
     @include media-query($breakpoint-tablet) {
       padding: 20px 20px;

@@ -29,6 +29,7 @@
 .main-nav-logo {
   @include transform(translateX(-50%));
   @include transition(all, 250ms, linear);
+  border: 0 !important;
   bottom: -50px;
   display: block;
   left: 50%;
@@ -37,6 +38,7 @@
   position: absolute;
   width: 28%;
   img {
+    border: 0 !important;
     width: 100%;
   }
 
