@@ -48,7 +48,11 @@
   $('.mobile-nav-launcher').click(function () {
     $(this).toggleClass('active');
     $('.main-nav').toggleClass('active');
-    $('body').bind('touchmove', function(e){e.preventDefault()})
+    // $('body').bind('touchmove', function(e){e.preventDefault()})
+    if($('.mobile-nav-launcher').hasClass('active')) {
+      $('body').on('touchmove', false);
+    } else { $('body').on('touchmove', true);};
   });
+
 
 </script>
