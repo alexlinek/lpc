@@ -11,13 +11,13 @@
   text-decoration: none;
   text-transform: uppercase;
   top: 0;
+  -webkit-appearance: none;
   &:hover {
     @include box-shadow(0, 8px, 0, $darkGold);
     background: lighten($gold, 5%);
     color: $white;
     text-decoration: none;
     top: -2px;
-    // @include transform(translateY(-2px));
   }
 }
 
