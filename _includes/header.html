@@ -45,13 +45,14 @@
     }
   });
   //mobile menu
-  $('.mobile-nav-launcher').click(function () {
+  $('.mobile-nav-launcher').click(function(e) {
     $(this).toggleClass('active');
     $('.main-nav').toggleClass('active');
-
-    if($('.mobile-nav-launcher').hasClass('active')) {
-      $('body').on('touchmove', false);
-    } else { $('body').on('touchmove', true);};
+      if($('.main-nav').hasClass('active')) {
+        $('body').on('touchmove', false);
+      } else  {
+        $('body').off('touchmove', false);
+      }
   });
 
 
