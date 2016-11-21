@@ -78,6 +78,7 @@
 .copyright {
   width: 100%;
   text-align: right;
+  a { color: $white; }
   @include media-query($breakpoint-mobile) {
     text-align: center;
   }

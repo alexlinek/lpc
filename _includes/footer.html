@@ -23,13 +23,15 @@
         {{ site.phone }}
       </div>
       <div class="mobiletel">
-        <a href="tel:+{{ site.phone }}">{{ site.phone }}</a>
+        <a href="tel:{{ site.phone }}">{{ site.phone }}</a>
       </div>
     </div>
   </div>
   <div class="group sub-footer">
     <div class="span1-1">
       <p class="copyright">
+        <a href="{{ site.baseurl }}privacy">Privacy Policy</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
         &copy;
         <script type="text/javascript">
           document.write(new Date().getFullYear());
