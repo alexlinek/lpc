@@ -29,6 +29,7 @@ markdown: kramdown
 
 gems:
   - octopress-autoprefixer
+  - jekyll-seo-tag
 
 # Turn on for production
 # sass:
