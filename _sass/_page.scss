@@ -43,7 +43,7 @@
   background-image: url('/images/commercial/plans.jpg');
 }
 #about-img {
-  background-image: url('/images/history/family-now.jpg');
+  background-image: url('/images/history/van.jpg');
   background-position: top left;
 }
 
@@ -113,21 +113,20 @@
   }
 }
 #about-stripe {
-  height: 950px;
+  height: 850px;
   @media screen and (min-width: 1200px) {
-    height: 1025px;
+    height: 925px;
   }
 }
 #about-overlay {
-  height: 1000px;
+  height: 900px;
   @media screen and (min-width: 1200px) {
-    height: 1075px;
+    height: 975px;
   }
 }
 
 #about-overlay {
   h2 {
-    text-align: center;
     margin: 1em auto 0.5em;
     @include media-query($breakpoint-mobile) {
       text-align: left;

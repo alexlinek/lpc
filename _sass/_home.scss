@@ -176,7 +176,7 @@
     }
   }
   .bright-blue-color {
-    max-width: 24ch;
+    max-width: 30ch;
     letter-spacing: 1px;
     @include media-query($breakpoint-mobile) {
       font-size: 2em;
